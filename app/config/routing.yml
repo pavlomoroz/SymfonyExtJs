@@ -1,3 +1,7 @@
+malkos_extjs:
+    resource: "@MalkosExtjsBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

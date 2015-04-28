@@ -1,0 +1,3 @@
+malkos_extjs_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: MalkosExtjsBundle:Default:index }
