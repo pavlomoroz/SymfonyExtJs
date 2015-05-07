@@ -3,8 +3,8 @@
 namespace Test\EAVBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Padam87\AttributeBundle\Annotation as EAV;
-use Padam87\AttributeBundle\Entity\AttributedEntityTrait;
+use Enviroment\EavBundle\Annotation as EAV;
+use Enviroment\EavBundle\Entity\AttributedEntityTrait;
 
 
 /**

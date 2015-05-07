@@ -11,6 +11,6 @@ app:
     type:     annotation
 
 padam87_attribute:
-    resource: "@Padam87AttributeBundle/Controller/"
+    resource: "@EnviromentEavBundle/Controller/"
     type:     annotation
     prefix:   /

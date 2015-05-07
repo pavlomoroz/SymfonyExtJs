@@ -1,7 +1,7 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}{# or whatever is your block name #}
-    <form method="POST" action="{{ path('padam87_attribute_schema_edit', { id: schema.getId() }) }}">
+    <form method="POST" action="{{ path('enviroment_eav_schema_edit', { id: schema.getId() }) }}">
         {{ form_rest(form) }}
 
         <div class="form-actions">

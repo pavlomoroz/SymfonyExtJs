@@ -2,7 +2,7 @@
 
 namespace Test\EAVBundle\Form;
 
-use Padam87\AttributeBundle\Form\AttributeType;
+use Enviroment\EavBundle\Form\AttributeType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;

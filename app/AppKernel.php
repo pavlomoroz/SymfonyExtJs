@@ -23,7 +23,6 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\AopBundle\JMSAopBundle(),
 
-            new Padam87\AttributeBundle\Padam87AttributeBundle(),
             new Enviroment\EavBundle\EnviromentEavBundle(),
         );
 

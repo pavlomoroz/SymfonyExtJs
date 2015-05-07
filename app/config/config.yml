@@ -2,7 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: "@Padam87AttributeBundle/Resources/config/config.yml" }
+    - { resource: "@EnviromentEavBundle/Resources/config/config.yml" }
 
 framework:
     #esi:             ~
@@ -76,5 +76,5 @@ swiftmailer:
 jms_di_extra:
     locations:
         all_bundles: false
-        bundles: [ Padam87AttributeBundle ]
+        bundles: [ EnviromentEavBundle ]
         directories: ["%kernel.root_dir%/../src"]
