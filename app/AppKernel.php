@@ -18,6 +18,13 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new Malkos\ExtjsBundle\MalkosExtjsBundle(),
+            new Test\EAVBundle\TestEAVBundle(),
+
+            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
+            new JMS\AopBundle\JMSAopBundle(),
+
+            new Padam87\AttributeBundle\Padam87AttributeBundle(),
+            new Enviroment\EavBundle\EnviromentEavBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

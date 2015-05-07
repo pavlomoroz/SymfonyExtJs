@@ -1,0 +1,15 @@
+test_eav_homepage:
+    path:     /main
+    defaults: { _controller: TestEAVBundle:Default:index }
+
+test_eav_data_new:
+    path:     /new
+    defaults: { _controller: TestEAVBundle:Default:new }
+
+test_eav_data_edit:
+    path:     /{id}/edit
+    defaults: { _controller: TestEAVBundle:Default:edit }
+
+test_eav_data_delete:
+    path:     /{id}/delete
+    defaults: { _controller: TestEAVBundle:Default:delete }

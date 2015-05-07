@@ -1,0 +1,4 @@
+services:
+#    eav.entity:
+#        class: %eav.entity.class%
+#        arguments: [@doctrine.orm.entity_manager]

@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}{# or whatever is your block name #}
+    <form method="POST" action="{{ path('padam87_attribute_schema_edit', { id: schema.getId() }) }}">
+        {{ form_rest(form) }}
+
+        <div class="form-actions">
+            <button class="btn btn-primary" role="submit">{% trans %}Save{% endtrans %}</button>
+            <a class="btn btn-success" href="#" onclick="Schema.addDefinition(); return false;">
+                {% trans %}Add new item{% endtrans %}
+            </a>
+            <a class="btn btn-default-outline" href="{{ path('test_eav_homepage') }}">Back to the list</a>
+        </div>
+
+        <script>
+            Schema = {
+                addDefinition: function() {
+                    var prototype = $('#schema_definitions').data('prototype');
+                    var newItem = prototype.replace(/_name/g, $('#schema_definitions').children().length);
+
+                    $('#schema_definitions').append(newItem);
+                }
+            }
+        </script>
+    </form>
+{% endblock %}
