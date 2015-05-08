@@ -294,6 +294,19 @@ class Definition
     }
 
     /**
+     * @param \Enviroment\EavBundle\Entity\Option $option
+     * @return $this
+     */
+    public function setOptions($option)
+    {
+        if (in_array($option, $this->options->toArray())) {
+            $this->options[] = $option;
+        }
+
+        return $this;
+    }
+
+    /**
      * Add attributes
      *
      * @param \Enviroment\EavBundle\Entity\Attribute $attributes

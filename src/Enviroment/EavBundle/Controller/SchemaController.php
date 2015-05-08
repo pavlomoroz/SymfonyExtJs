@@ -14,9 +14,14 @@ use Enviroment\EavBundle\Form\SchemaType;
 */
 class SchemaController extends Controller
 {
+
+    public function indexAction()
+    {
+
+    }
+
     /**
      * @Route("/edit/{id}")
-     * @Template()
      */
     public function editAction($id)
     {
@@ -51,9 +56,9 @@ class SchemaController extends Controller
             }
         }
 
-        return array(
+        return $this->render('EnviromentEavBundle:Schema:edit.html.twig', array(
             'form' => $form->createView(),
             'schema' => $schema
-        );
+        ));
     }
 }

@@ -85,4 +85,12 @@ class Option
     {
         return $this->definition;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->name;
+    }
 }
