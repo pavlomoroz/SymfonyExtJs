@@ -116,14 +116,6 @@ class AttributeSubscriber implements EventSubscriberInterface
 
         $params['label'] = $definition->getName();
 
-        if ($definition->getUnit() != "") {
-            $params['label_attr']['unit'] = $definition->getUnit();
-        }
-
-        if ($definition->getDescription() != "") {
-            $params['label_attr']['help'] = $definition->getDescription();
-        }
-
         $params['auto_initialize'] = false;
 
         $form->add($this->factory->createNamed($fieldName, $type, $value, $params));

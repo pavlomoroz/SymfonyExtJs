@@ -16,9 +16,6 @@ class DefinitionType extends AbstractType
     {
         $builder->add('name', 'text', array(
         ));
-//        $builder->add('description', 'textarea', array(
-//            'required' => false
-//        ));
         $builder->add('type', 'choice', array(
             'choices' => array(
                 'text'      => 'Text',
@@ -28,9 +25,6 @@ class DefinitionType extends AbstractType
                 'radio'     => 'Radio'
             )
         ));
-//        $builder->add('unit', 'text', array(
-//            'required' => false
-//        ));
         $builder->add('required', 'checkbox', array(
             'required' => false
         ));

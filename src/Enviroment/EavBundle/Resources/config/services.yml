@@ -1,7 +1,7 @@
 parameters:
-    eav.entity.class:  Enviroment\EavBundle\Services\EavEntityService
+    enviroment.eav.entity.class:  Enviroment\EavBundle\Services\EavEntityService
 
 services:
-    eav.entity:
-        class: %eav.entity.class%
+    enviroment.eav.entity:
+        class: %enviroment.eav.entity.class%
         arguments: [@doctrine.orm.entity_manager]

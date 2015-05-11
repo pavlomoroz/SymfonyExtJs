@@ -16,7 +16,7 @@ class EavEntityService
         $this->entityManager = $entityManager;
     }
 
-    public function createAttributeEntity($entityClass = '')
+    public function getAttributeSchema($entityClass = '')
     {
         $schemas = $this->entityManager->getRepository('EnviromentEavBundle:Schema')->findAll();
 
@@ -42,6 +42,13 @@ class EavEntityService
         } else {
             $schema = $schemas[0];
         }
+
+        return $schema;
+    }
+
+    public function createAttributeEntity($entityClass = '')
+    {
+        $schema = $this->getAttributeSchema($entityClass);
 
         $className = $schema->getClassName();
 

@@ -54,6 +54,9 @@ class Attribute
      */
     public function setValue($value)
     {
+        if ($value && is_array($value)) {
+            $value = reset($value);
+        }
         $this->value = $value;
 
         return $this;

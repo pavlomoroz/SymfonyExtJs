@@ -3,6 +3,7 @@
 namespace Enviroment\EavBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -19,28 +20,16 @@ class Definition
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
     private $name;
-
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     * @var text
-     */
-    private $description;
 
     /**
      * @ORM\Column(type="string", length=100)
      * @var string
      */
     private $type;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @var string
-     */
-    private $unit;
 
     /**
      * @ORM\Column(type="boolean")
@@ -79,8 +68,8 @@ class Definition
      */
     public function __construct()
     {
-        $this->options = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->attributes = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->options = new ArrayCollection();
+        $this->attributes = new ArrayCollection();
     }
 
     public function __toString()
@@ -122,29 +111,6 @@ class Definition
     }
 
     /**
-     * Set description
-     *
-     * @param string $description
-     * @return Definition
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
      * Set type
      *
      * @param string $type
@@ -165,29 +131,6 @@ class Definition
     public function getType()
     {
         return $this->type;
-    }
-
-    /**
-     * Set unit
-     *
-     * @param string $unit
-     * @return Definition
-     */
-    public function setUnit($unit)
-    {
-        $this->unit = $unit;
-
-        return $this;
-    }
-
-    /**
-     * Get unit
-     *
-     * @return string
-     */
-    public function getUnit()
-    {
-        return $this->unit;
     }
 
     /**
