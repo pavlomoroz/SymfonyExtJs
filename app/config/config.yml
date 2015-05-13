@@ -35,7 +35,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ MalkosExtjsBundle ]
+    bundles:        [ MalkosExtjsBundle, EnviromentEavBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
